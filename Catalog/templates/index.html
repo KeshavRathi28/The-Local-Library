@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+    Home | The Local Library
+{% endblock %}
+
+{% block content %}
+    <h1>The Local Library Home</h1>
+
+    <p>Welcome to TheLocalLibrary, my <em>first website</em> designed with <strong>Django!</strong></p>
+
+    <h2>Dynamic Content</h2>
+
+    <ul>
+        <li><strong>Books:</strong> {{ num_books }}</li>
+        <li><strong>Copies:</strong> {{ num_instances }}</li>
+        <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+        <li><strong>Authors:</strong> {{ num_authors }}</li>
+    </ul>
+
+    <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}</p>
+{% endblock %}
